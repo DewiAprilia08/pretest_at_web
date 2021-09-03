@@ -1,0 +1,59 @@
+{
+ "name": "pretest_at_web",
+ "version": "1.0.0",
+ "description": "pretest_at_web",
+ "main": "index.js",
+ "dependencies": {
+  "@babel/preset-env": "^7.15.0",
+  "assert": "^2.0.0",
+  "chai": "^4.3.4",
+  "chai-as-promised": "^7.1.1",
+  "chai-webdriverio": "^1.0.0",
+  "chromedriver": "^92.0.2",
+  "mkdirp": "^1.0.4",
+  "selenium-webdriver": "^4.0.0-rc-1",
+  "wdio-chromedriver-service": "^7.2.0",
+  "wdio-cucumberjs-json-reporter": "^4.0.2",
+  "wdio-json-reporter": "^2.0.0",
+  "wdio-native-app-compare-service": "^1.2.0",
+  "webdriverio": "^7.11.1"
+ },
+ "devDependencies": {
+  "@babel/cli": "^7.14.8",
+  "@babel/core": "^7.15.0",
+  "@babel/register": "^7.15.3",
+  "@wdio/allure-reporter": "^6.3.6",
+  "@wdio/appium-service": "^6.4.0",
+  "@wdio/browserstack-service": "^6.4.0",
+  "@wdio/cli": "^6.12.1",
+  "@wdio/cucumber-framework": "^6.4.0",
+  "@wdio/devtools-service": "^7.1.1",
+  "@wdio/local-runner": "^6.4.0",
+  "@wdio/sauce-service": "^6.4.0",
+  "@wdio/spec-reporter": "^6.4.0",
+  "@wdio/sync": "^6.4.0",
+  "eslint": "^7.18.0",
+  "eslint-config-standard": "^14.1.1",
+  "eslint-plugin-import": "^2.22.0",
+  "eslint-plugin-node": "^11.1.0"
+ },
+ "scripts": {
+  "test": "./node_modules/.bin/wdio ./wdio.conf.js",
+  "allure-report": "./node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open"
+ },
+ "babel": {
+  "presets": [
+   [
+    "@babel/preset-env",
+    {
+     "targets": {
+      "node": "current"
+     }
+    }
+   ]
+  ]
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC"
+}
